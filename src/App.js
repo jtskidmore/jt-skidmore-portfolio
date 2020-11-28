@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Navbar from './Navbar.js'
 import Projects from './Projects.js'
 import Contact from './Contact.js'
+import Home from './Home.js'
 
 export default class App extends React.Component {
 
@@ -12,7 +13,10 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
-          <Navbar/>
+          <Navbar className="header-color"/>
+          <Route exact path="/">
+            <Home/>
+          </Route>
           <Route exact path="/projects">
             <Projects/>
           </Route>

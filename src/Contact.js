@@ -4,7 +4,7 @@ import './App.css';
 export default class Contact extends React.Component {
     render () {
         return (
-            <div>
+            <div className="contact-container">
                 <h1>This is the contact page</h1>
                 <ul>
                     <a href="https://github.com/jtskidmore"><li>Github</li></a>

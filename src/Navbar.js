@@ -7,20 +7,24 @@ class Navbar extends React.Component {
     render() {
 
         return (
-            <div >
+            <div className="header-color">
                 <ul className='body'>
                     <div className='shift'>
-                        <div className="nav-links">
-                            <NavLink className="link"
+                        <div className="nav nav-pills">
+                            <NavLink className="nav-link"
                                 to="/projects"
                                 exact >
-                                <li className="nav-li"> PROJECTS </li></NavLink>
+                                <li className="nav-item"> PROJECTS </li></NavLink>
 
+                            <NavLink className="nav-link"
+                                to="/"
+                                exact >
+                                <li className="nav-item"> HOME </li></NavLink>
 
-                            <NavLink className='link'
+                            <NavLink className='nav-link'
                                 to="/contact"
                                 exact >
-                                <li className="nav-li"> CONTACT </li></NavLink>
+                                <li className="nav-item"> CONTACT </li></NavLink>
 
                         </div>
                     </div>
