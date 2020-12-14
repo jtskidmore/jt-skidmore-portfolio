@@ -1,18 +1,37 @@
 .header-color {
-  background: #16A085;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43c6ac, #191654); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43c6ac, #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+html {
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43c6ac, #191654); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43c6ac, #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .landing-grid {
-  background: #16A085;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: row;
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43c6ac, #191654); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43c6ac, #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: fixed;
   text-align: center;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#homepage-logo {
+  display: flex;
+  width: 100%;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222); 
+}
+
+ul.body {
+  padding: 0px;
 }
 
 .social-links {
@@ -26,6 +45,11 @@
   color: white;
   font-size: 5em;
   padding: 8px;
+  transition: .4s ease;
+}
+
+.social-links i:hover {
+  
 }
 
 .nav-link {
@@ -52,11 +76,46 @@ div.nav-pills {
    list-style-type: none;
 }
 
+.left-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.right-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.graphic {
+  opacity: .9;
+  width: 100%;
+  height: 100%;
+  margin-top: -5%;
+  margin-bottom: 10%;
+  
+}
+
+.mdl-cell {
+  display: flex;
+  vertical-align: middle;
+}
+
+#homepage-graphic {
+  width: 100%;
+  padding-right: 2em;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222); 
+}
+
 .banner-text {
-  background-color: black;
-  opacity: .8;
-  width: 75%;
-  margin: auto;
+  opacity: .9;
+  width: 70%;
+  margin-top: -10%;
+  margin-left: 15%;
   border-radius: 10px;
 }
 
@@ -76,4 +135,46 @@ div.nav-pills {
   color: white;
   font-size: 20px;
   padding: 1em;
+}
+
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
