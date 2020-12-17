@@ -9,6 +9,29 @@ import Home from './Home.js'
 
 export default class App extends React.Component {
 
+  state = {
+    projects: [
+      {picture: "react-logo.png",
+      title: "On-Sight",
+      description: "An app for climbers",
+      demo_url: "",
+      repo_url: ""
+    },
+    {picture: "react-logo.png",
+      title: "Hulite",
+      description: "Hulu clone",
+      demo_url: "",
+      repo_url: ""
+    },
+    {picture: "react-logo.png",
+      title: "Planet Pursuit",
+      description: "A Star Wars game",
+      demo_url: "",
+      repo_url: ""
+    }
+    ]
+  }
+
   render() {
     return (
       <Router>
@@ -18,7 +41,7 @@ export default class App extends React.Component {
             <Home/>
           </Route>
           <Route exact path="/projects">
-            <Projects/>
+            <Projects projects={this.state.projects}/>
           </Route>
           <Route exact path="/contact">
             <Contact/>

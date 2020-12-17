@@ -178,3 +178,38 @@ div.nav-pills {
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
+
+.carousel {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 305px;
+  position: relative;
+  align-items: center;
+}
+
+.slider {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.outer-container {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+
+.card-container {
+  padding: 4%;
+  width: 100%;
+  display: flex; 
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  display: inline-flex;
+  justify-content: space-between;
+}
